@@ -1,0 +1,12 @@
+name: Hello
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: あいさつ
+        run: echo "Hello, GitHub Actions!"
+      - name: 実行した人を表示
+        run: echo "実行した人：${{ github.actor }}"
