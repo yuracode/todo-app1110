@@ -19,3 +19,10 @@ jobs:
           npm -v
           pwd
           ls -la
+      - name: 実行の情報を表示
+        run: |
+          echo "イベント：${{ github.event_name }}"
+          echo "ブランチ：${{ github.ref_name }}"
+          echo "コミット：${{ github.sha }}"
+          echo "リポジトリ：${{ github.repository }}"
+          echo "ランナーの OS：${{ runner.os }}"
