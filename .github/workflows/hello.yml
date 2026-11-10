@@ -26,3 +26,9 @@ jobs:
           echo "コミット：${{ github.sha }}"
           echo "リポジトリ：${{ github.repository }}"
           echo "ランナーの OS：${{ runner.os }}"
+  goodbye:
+    needs: greet
+    runs-on: ubuntu-latest
+    steps:
+      - name: お別れ
+        run: echo "greet が終わったので goodbye です"
